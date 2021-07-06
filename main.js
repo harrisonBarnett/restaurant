@@ -1,1 +1,1 @@
-console.log("hello restaurant page");
+(()=>{var e={745:e=>{e.exports={box:function(){const e=document.createElement("div");return e.style="width: 100px; height: 100px; background: red;",e}}}},t={};function n(r){var o=t[r];if(void 0!==o)return o.exports;var d=t[r]={exports:{}};return e[r](d,d.exports,n),d.exports}(()=>{const e=document.getElementById("content"),t=document.createElement("h1");t.innerText="HELLO RESTAURANT",e.appendChild(t);const r=n(745).box();e.appendChild(r)})()})();
