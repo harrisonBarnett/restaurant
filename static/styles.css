@@ -56,10 +56,11 @@ body {
     margin: 0 0 1em 0;
     font-family: var(--script-font);
     font-size: 2em;
+    font-weight: 600;
 }
 /* tabs */
 .tabs-container {
-    margin: 0 100px;
+    margin: 0 15vw;
 }
 .tabs-container ul {
     margin: 0;
@@ -69,8 +70,8 @@ body {
     justify-content: space-between;
 }
 .tabs-container li {
-    width: 150px;
-    height: 40px;
+    width: 250px;
+    height: 60px;
     display: grid;
     align-content: center;
     text-align: center;
@@ -80,11 +81,28 @@ body {
 .tabs-container a {
     text-decoration: none;
     font-family: var(--script-font);
-    font-size: 2em;
+    font-size: 2.6em;
+    font-weight: 600;
     color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,.3);
 }
 .tab-active {
     position: relative;
     z-index: 3;
 }
 /* end header =============================== */
+/* HOME PAGE ================================ */
+/* hero image */
+.home-page-container {
+    width: 100%;
+    height: 100%;
+}
+.hero-img {
+    height: 400px;
+    width: 70vw;
+    margin: 60px auto;
+    background-image: url('/static/images/scallops.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* end home page ============================ */
