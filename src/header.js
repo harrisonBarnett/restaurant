@@ -50,4 +50,34 @@ function header() {
     return header;
 }
 
-export {header, tabs};
+function footer() {
+    const footer = document.createElement('div');
+    footer.classList.add('footer');
+
+    const footerText = document.createElement('p');
+    footerText.classList.add('footer-text');
+    footerText.innerHTML = 'copyright 2021 the restaurant inc.';
+    footer.appendChild(footerText);
+
+    const footerList = document.createElement('ul');
+    footerList.classList.add('footer-icons');
+    const instagram = document.createElement('a');
+    instagram.classList.add('footer-icon');
+    instagram.href = '#';
+    instagram.innerHTML = '<img src="/static/images/social-icons/instagram.svg">';
+    footerList.appendChild(instagram);
+    const twitter = document.createElement('div');
+    twitter.classList.add('footer-icon');
+    twitter.innerHTML = '<a href="#"><img src="/static/images/social-icons/twitter.svg"></a>';
+    footerList.appendChild(twitter);
+    const facebook = document.createElement('div');
+    facebook.classList.add('footer-icon');
+    facebook.innerHTML = '<a href="#"><img src="/static/images/social-icons/facebook.svg"></a>';
+    footerList.appendChild(facebook);
+
+    footer.appendChild(footerList);
+
+    return footer;
+}
+
+export {header, tabs, footer};
