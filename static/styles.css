@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap');
+
+:root {
+    --main-color: rgba(211, 112, 116, 1);
+    --secondary-color: rgba(255, 228, 227, 1);
+    
+    --block-font: "Roboto";
+    --script-font: 'Dawning of a New Day';
+    
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+/* HEADER =================================== */
+/* title/subtitle */
+.header {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: var(--main-color);
+}
+.title-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.title-container h1,
+.title-container p {
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,.3);
+}
+.title-container h1 {
+    margin: 1.2em 0 0 0;
+    font-family: var(--block-font);
+    font-size: 3em;
+}
+.title-container p {
+    margin: 0 0 1em 0;
+    font-family: var(--script-font);
+    font-size: 2em;
+}
+/* tabs */
+.tabs-container {
+    margin: 0 100px;
+}
+.tabs-container ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.tabs-container li {
+    width: 150px;
+    height: 40px;
+    display: grid;
+    align-content: center;
+    text-align: center;
+    background: var(--main-color);
+}
+.tabs-container a {
+    text-decoration: none;
+    font-family: var(--script-font);
+    font-size: 2em;
+    color: var(--secondary-color);
+}
+/* end header =============================== */

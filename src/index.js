@@ -1,10 +1,6 @@
 const content = document.getElementById('content');
-const title = document.createElement('h1');
-title.innerText = "HELLO RESTAURANT";
-content.appendChild(title);
 
-const displaySite = require('./displaySite');
+import {header, tabs} from './header.js';
 
-const box = displaySite.box();
-content.appendChild(box);
-
+content.appendChild(header());
+content.appendChild(tabs());
