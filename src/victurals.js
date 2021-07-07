@@ -8,6 +8,7 @@ function buildPage() {
 
     const pageContainer = document.createElement('div');
     pageContainer.classList.add('victurals-page-container');
+    pageContainer.classList.add('page-container');
     pageContainer.innerText = "victurals";
 
 

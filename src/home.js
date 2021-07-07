@@ -8,6 +8,7 @@ function buildPage() {
 
     const pageContainer = document.createElement('div');
     pageContainer.classList.add('home-page-container');
+    pageContainer.classList.add('page-container');
     const heroImg = document.createElement('div');
     heroImg.classList.add('hero-img');
     pageContainer.appendChild(heroImg);
