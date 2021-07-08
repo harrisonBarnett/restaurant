@@ -27,6 +27,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
+    padding: 0 0 2em 0;
 }
 /* HEADER =================================== */
 /* title/subtitle */
@@ -232,8 +233,6 @@ body {
 .farm-menu {
     width: 60vw;
     margin: 2vw auto;
-    height: 50vh;
-    border: 1px solid red;
 }
 .menu-row {
     display: flex;
@@ -241,14 +240,19 @@ body {
     justify-content: space-around;
 }
 .menu-item {
-    width: 20vw;
+    white-space: nowrap;
     text-align: center;
+    color: var(--main-color);
     font-family: var(--light-font);
     font-size: 1.2em;
 }
 .menu-item-spacer {
-    width: 10vw;
-    height: 1px;
-    background: black;
+    margin: 0 2em;
+    width: 75%;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--main-color);
+    /* box-shadow: 1px 1px 4px rgba(0,0,0,.15); */
+
 }
 /* end victurals page ======================= */

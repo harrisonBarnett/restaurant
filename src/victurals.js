@@ -72,12 +72,14 @@ function menuItems() {
     }
 
 
-
-    const row1 = createItem('beef tartare', '$12');
-    farmMenu.appendChild(row1);
-
-    const row2 = createItem('mussels provencale', '$20');
-    farmMenu.appendChild(row2);
+    
+    farmMenu.appendChild(createItem('beef tartare', '$14'));
+    farmMenu.appendChild(createItem('mussels provencale', '$20'));
+    farmMenu.appendChild(createItem('scallops', '$18'));
+    farmMenu.appendChild(createItem('flemish onion soup', '$10'));
+    farmMenu.appendChild(createItem('braised short ribs', '$22'));
+    farmMenu.appendChild(createItem('wedge salad', '$10'));
+    farmMenu.appendChild(createItem('charcuterie', '$16'));
 
     return farmMenu;
 }
