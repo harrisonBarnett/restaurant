@@ -49,23 +49,35 @@ function menuItems() {
     const farmMenu = document.createElement('div');
     farmMenu.classList.add('farm-menu');
 
-    const row1 = document.createElement('div');
-    row1.classList.add('menu-row');
+    function createItem(x, y) {
+        const row = document.createElement('div');
+        row.classList.add('menu-row');
 
-    let item = document.createElement('p');
-    item.innerHTML = 'beef tartare';
-    item.classList.add('menu-item');
-    let spacer = document.createElement('div');
-    spacer.classList.add('menu-item-spacer');
-    item.classList.add('menu-item');
-    let price = document.createElement('p');
-    price.innerHTML = '$12';
-    price.classList.add('menu-item');
-    row1.appendChild(item);
-    row1.appendChild(spacer);
-    row1.appendChild(price);
+        const spacer = document.createElement('div');
+        spacer.classList.add('menu-item-spacer');
 
+        const item = document.createElement('p');
+        item.classList.add('menu-item');
+        item.innerHTML = x;
+
+        const price = document.createElement('p');
+        price.classList.add('menu-item');
+        price.innerHTML = y;
+
+        row.appendChild(item);
+        row.appendChild(spacer);
+        row.appendChild(price);
+
+        return row;
+    }
+
+
+
+    const row1 = createItem('beef tartare', '$12');
     farmMenu.appendChild(row1);
+
+    const row2 = createItem('mussels provencale', '$20');
+    farmMenu.appendChild(row2);
 
     return farmMenu;
 }

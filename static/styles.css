@@ -243,6 +243,8 @@ body {
 .menu-item {
     width: 20vw;
     text-align: center;
+    font-family: var(--light-font);
+    font-size: 1.2em;
 }
 .menu-item-spacer {
     width: 10vw;
