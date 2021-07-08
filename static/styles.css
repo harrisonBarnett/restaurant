@@ -3,7 +3,7 @@
 
 :root {
     --main-color: rgba(211, 112, 116, 1);
-    --secondary-color: rgba(255, 228, 227, 1);
+    --secondary-color: rgb(255, 228, 227);
     --complementary-color: rgba(137, 147, 70, 1);
     
     --block-font: "Roboto";
@@ -14,13 +14,11 @@
 
 body {
     position: relative;
-    z-inde: 1;
+
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    /* height: 100vh;
-    width: 100vw; */
 }
 
 #content {
@@ -65,7 +63,8 @@ body {
 }
 /* tabs */
 .tabs-container {
-    margin: 0 15vw;
+    width: 70vw;
+    margin: 0 auto;
 }
 .tabs-container ul {
     margin: 0;
@@ -75,7 +74,9 @@ body {
     justify-content: space-between;
 }
 .tabs-container li {
-    width: 250px;
+    margin: 0;
+    padding: 0;
+    width: 16vw;
     height: 60px;
     display: grid;
     align-content: center;
@@ -98,7 +99,7 @@ body {
 /* end header =============================== */
 /* FOOTER =================================== */
 .footer {
-    position: absolute;
+    position: fixed;
     z-index: 10;
     bottom: 0;
     left: 0;
@@ -112,6 +113,7 @@ body {
     margin-left: 1em;
     font-family: var(--light-font);
     color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
 }
 .footer-icons {
     list-style: none;
@@ -123,6 +125,13 @@ body {
     width: 25px;
     margin: 0 1em;
     padding: 0;
+    filter: invert(83%) 
+    sepia(4%) 
+    saturate(1139%) 
+    hue-rotate(314deg) 
+    brightness(104%) 
+    contrast(115%)
+    drop-shadow(2px 2px 4px rgba(0, 0, 0, .25));
 }
 /* end footer =============================== */
 /* HOME PAGE ================================ */
@@ -144,24 +153,24 @@ body {
 }
 .hero-img-accent {
     width: 60vw;
-    height: 5vw;
+    height: 2vw;
     margin: 0 auto;
     background: var(--complementary-color);
-    box-shadow: 2px 2px 4px rgba(0,0,0,.25);
 }
 .about-container {
-    margin: 0 20vw 0 15vw;
-    padding-bottom: 200px;
+    width: 70vw;
+    margin: 0 auto;
+    padding-bottom: 120px;
     display: flex;
     justify-content: space-between;
 }
 .about-text {
     width: 30vw;
-    margin: auto 0;
+    margin: auto 5vw;
     font-family: var(--light-font);
     font-size: 1.2em;
     line-height: 2.4;
-
+    text-align: justify;
 }
 .about-text::first-letter {
     color: var(--main-color);
@@ -184,6 +193,46 @@ body {
     background-size: cover;
     background-position: center;
     box-shadow: 2px 2px 4px rgba(0,0,0,.25),
-                5vw 5vw 0 var(--complementary-color);
+                2vw 2vw 0 var(--complementary-color);
 }
 /* end home page ============================ */
+/* VICTURALS PAGE =========================== */
+.victurals-page-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+.farm-header {
+    position: relative;
+    width: 70vw;
+    height: 120px;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-color);
+    box-shadow: 2px 2px 4px rgba(0,0,0,.25);
+}
+.farm-header-accent {
+    width: 60vw;
+    height: 2vw;
+    margin: 0 auto;
+    background: var(--complementary-color);
+    box-shadow: 2px 2px 4px rgba(0,0,0,.25);
+}
+.farm-title {
+    font-family: var(--script-font);
+    font-size: 3em;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,.3);
+
+}
+.farm-menu {
+    width: 70vw;
+    margin: 2vw auto;
+    height: 50vh;
+    border: 1px solid red;
+}
+/* end victurals page ======================= */

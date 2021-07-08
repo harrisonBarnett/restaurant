@@ -1,3 +1,4 @@
+
 function buildPage() {
     const content = document.getElementById('content');
     const currentPage = document.querySelector('.page-container');
@@ -22,6 +23,7 @@ function buildPage() {
     const aboutText = document.createElement('p');
     aboutText.classList.add('about-text');
     aboutText.innerHTML = 
+        'Lectus magna fringilla urna, porttitor rhoncus dolor purus non enim. ' +
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit'+
         ' ut aliquam, purus sit amet luctus venenatis, lectus magna '+
         'fringilla urna, porttitor rhoncus dolor purus non <span id="accent-word">enim.</span>';
@@ -35,7 +37,7 @@ function buildPage() {
     content.appendChild(pageContainer);
 }
 
-function displayHome() {
+function tabHome() {
     const content = document.getElementById('content');
     // swap tabs
     const tab = document.getElementById('home-tab');
@@ -52,4 +54,4 @@ function displayHome() {
 }
 
 
-export {displayHome};
+export {tabHome};
