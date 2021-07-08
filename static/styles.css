@@ -230,9 +230,23 @@ body {
 
 }
 .farm-menu {
-    width: 70vw;
+    width: 60vw;
     margin: 2vw auto;
     height: 50vh;
     border: 1px solid red;
+}
+.menu-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.menu-item {
+    width: 20vw;
+    text-align: center;
+}
+.menu-item-spacer {
+    width: 10vw;
+    height: 1px;
+    background: black;
 }
 /* end victurals page ======================= */
