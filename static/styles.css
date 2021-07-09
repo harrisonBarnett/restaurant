@@ -5,13 +5,16 @@
     --main-color: rgba(211, 112, 116, 1);
     --secondary-color: rgb(255, 228, 227);
     --complementary-color: rgba(137, 147, 70, 1);
+    --light-color: rgb(247, 247, 239);
     
     --block-font: "Roboto";
     --light-font: "Arial";
     --script-font: 'Dawning of a New Day';
     
 }
-
+html {
+    background: var(--secondary-color);
+}
 body {
     position: relative;
 
@@ -29,6 +32,10 @@ body {
     width: 100%;
     padding: 0 0 5vw 0;
     background: var(--secondary-color);
+}
+.page-container {
+    height: 100%;
+    width: 100%;
 }
 /* HEADER =================================== */
 /* title/subtitle */
@@ -90,7 +97,7 @@ body {
 .tabs-container a {
     text-decoration: none;
     font-family: var(--script-font);
-    font-size: 2.6em;
+    font-size: 2em;
     font-weight: 600;
     color: var(--secondary-color);
     text-shadow: 2px 2px 4px rgba(0,0,0,.15);
@@ -170,14 +177,14 @@ body {
 .about-text {
     width: 26vw;
     height: 360px;
-    margin: 2em 0;
+    margin: 2em 0 2em 2vw;
     padding: 20px 2vw;
     font-family: var(--light-font);
     color: rgba(0,0,0,.75);
     font-size: 1.2em;
     line-height: 2.4;
     text-align: justify;
-    background:rgb(247, 247, 239);
+    background: var(--light-color);
     box-shadow: 2px 2px 4px rgba(0,0,0,.25),
                 -2vw -2vw 0 var(--complementary-color);
 }
@@ -198,7 +205,7 @@ body {
     font-size: 1.2em;
     height: 400px;
     width: 30vw;
-    margin: 2em 0;
+    margin: 2em 2vw 0 0;
     background-image: url('/static/images/chef.jpg');
     background-size: cover;
     background-position: center;
@@ -238,7 +245,6 @@ body {
     height: 2vw;
     margin: 0 auto;
     background: var(--complementary-color);
-    box-shadow: 2px 2px 4px rgba(0,0,0,.25);
 }
 .menu-title {
     font-family: var(--script-font);
@@ -269,7 +275,7 @@ body {
     width: 70vw;
     margin: 2vw auto;
     padding: 2em 0;
-    background: rgb(247, 247, 239);
+    background: var(--light-color);
     box-shadow: 2px 2px 4px rgba(0,0,0,.25);
 }
 .menu-row-container {
@@ -326,3 +332,28 @@ body {
     background: var(--main-color);
 }
 /* end menu pages ======================= */
+/* CONTACT PAGE ========================= */
+.contact-header-accent {
+    width: 60vw;
+    height: 2vw;
+    margin: 0 auto;
+    background: var(--complementary-color);
+}
+.contact-container {
+    width: 40vw;
+    margin: 5vw 30vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: var(--light-color);
+    box-shadow: 2px 2px 4px rgba(0,0,0,.25),
+                2vw 2vw 0 var(--complementary-color);
+}
+.contact-info {
+    margin: 1.2em 0;
+    line-height: 1.4;
+    color: var(--main-color);
+    font-family: var(--light-font);
+    font-size: 1.4em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.15);
+}

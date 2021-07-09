@@ -13,19 +13,17 @@ function displayVicturals() {
     const pageContainer = document.createElement('div');
     pageContainer.classList.add('victurals-page-container');
     pageContainer.classList.add('page-container');
-
-    const farmSection = document.createElement('div');
-    farmSection.classList.add('menu-section');
-    const farmHeader = document.createElement('div');
-    farmHeader.classList.add('menu-header');
+    // page header
+    const menuHeader = document.createElement('div');
+    menuHeader.classList.add('menu-header');
     const farmTitle = document.createElement('h2');
     farmTitle.classList.add('menu-title');
     farmTitle.innerHTML = "from the farm";
-    farmHeader.appendChild(farmTitle);
-    pageContainer.appendChild(farmHeader);
-    const farmHeaderAccent = document.createElement('div');
-    farmHeaderAccent.classList.add('menu-header-accent');
-    pageContainer.appendChild(farmHeaderAccent);
+    menuHeader.appendChild(farmTitle);
+    pageContainer.appendChild(menuHeader);
+    const menuHeaderAccent = document.createElement('div');
+    menuHeaderAccent.classList.add('menu-header-accent');
+    pageContainer.appendChild(menuHeaderAccent);
 
     const heroImg = document.createElement('div');
     heroImg.classList.add('menu-img');

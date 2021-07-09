@@ -1,6 +1,7 @@
 import { displayHome } from "./home";
 import { displayLibations } from "./libations";
 import { displayVicturals } from "./victurals";
+import { displayContact } from "./contact";
 
 // template functions
 function tabs() {

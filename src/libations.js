@@ -11,19 +11,19 @@ function displayLibations() {
     swapTab('libations');
 
     const pageContainer = document.createElement('div');
-    pageContainer.classList.add('victurals-page-container');
+    pageContainer.classList.add('libations-page-container');
     pageContainer.classList.add('page-container');
-
-    const farmHeader = document.createElement('div');
-    farmHeader.classList.add('menu-header');
-    const farmTitle = document.createElement('h2');
-    farmTitle.classList.add('menu-title');
-    farmTitle.innerHTML = "from the counter";
-    farmHeader.appendChild(farmTitle);
-    pageContainer.appendChild(farmHeader);
-    const farmHeaderAccent = document.createElement('div');
-    farmHeaderAccent.classList.add('menu-header-accent');
-    pageContainer.appendChild(farmHeaderAccent);
+    // page header
+    const menuHeader = document.createElement('div');
+    menuHeader.classList.add('menu-header');
+    const menuTitle = document.createElement('h2');
+    menuTitle.classList.add('menu-title');
+    menuTitle.innerHTML = "from the counter";
+    menuHeader.appendChild(menuTitle);
+    pageContainer.appendChild(menuHeader);
+    const menuHeaderAccent = document.createElement('div');
+    menuHeaderAccent.classList.add('menu-header-accent');
+    pageContainer.appendChild(menuHeaderAccent);
 
     const heroImg = document.createElement('div');
     heroImg.classList.add('menu-img');
