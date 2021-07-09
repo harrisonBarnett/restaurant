@@ -1,9 +1,9 @@
 const content = document.getElementById('content');
 
-import {header, tabs, footer} from './header.js';
-import {tabHome} from './home.js';
+import {header, tabs, footer} from './lib.js';
+import {displayHome} from './home.js';
 
 content.appendChild(header());
 content.appendChild(tabs());
-document.body.appendChild(footer());
-tabHome();
+content.appendChild(footer());
+displayHome();

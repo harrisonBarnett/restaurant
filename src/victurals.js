@@ -1,4 +1,6 @@
-function buildPage() {
+import { swapTab, createItem } from "./lib";
+
+function displayVicturals() {
     const content = document.getElementById('content');
     const currentPage = document.querySelector('.page-container');
 
@@ -6,82 +8,74 @@ function buildPage() {
         content.removeChild(currentPage);
     }
 
+    swapTab('victurals');
+
     const pageContainer = document.createElement('div');
     pageContainer.classList.add('victurals-page-container');
     pageContainer.classList.add('page-container');
-    // farm menu
+
     const farmSection = document.createElement('div');
-    farmSection.classList.add('farm-section');
+    farmSection.classList.add('menu-section');
     const farmHeader = document.createElement('div');
-    farmHeader.classList.add('farm-header');
+    farmHeader.classList.add('menu-header');
     const farmTitle = document.createElement('h2');
-    farmTitle.classList.add('farm-title');
+    farmTitle.classList.add('menu-title');
     farmTitle.innerHTML = "from the farm";
     farmHeader.appendChild(farmTitle);
-    farmSection.appendChild(farmHeader);
+    pageContainer.appendChild(farmHeader);
     const farmHeaderAccent = document.createElement('div');
-    farmHeaderAccent.classList.add('farm-header-accent');
-    farmSection.appendChild(farmHeaderAccent);
+    farmHeaderAccent.classList.add('menu-header-accent');
+    pageContainer.appendChild(farmHeaderAccent);
 
-    farmSection.appendChild(menuItems());
+    const heroImg = document.createElement('div');
+    heroImg.classList.add('menu-img');
+    heroImg.classList.add('farm-menu-img');
+    pageContainer.appendChild(heroImg);
+    const heroAccent = document.createElement('div');
+    heroAccent.classList.add('menu-img-accent');
+    pageContainer.appendChild(heroAccent);
 
-    pageContainer.appendChild(farmSection);
+    // append menuItems() to the document
+    pageContainer.appendChild(menuItems());
+
     content.appendChild(pageContainer);
 }
 
-function tabVicturals() {
-    const content = document.getElementById('content');
-    // swap tabs
-    const tab = document.getElementById('victurals-tab');
-
-    const activeTab = document.querySelector('.tab-active');
-    if(!activeTab) {
-        tab.classList.add('tab-active');
-    } else {
-    activeTab.classList.remove('tab-active');
-    tab.classList.add('tab-active');
-    }
-
-    buildPage();
-}
-
+// add all of your menu items here
 function menuItems() {
     const farmMenu = document.createElement('div');
-    farmMenu.classList.add('farm-menu');
-
-    function createItem(x, y) {
-        const row = document.createElement('div');
-        row.classList.add('menu-row');
-
-        const spacer = document.createElement('div');
-        spacer.classList.add('menu-item-spacer');
-
-        const item = document.createElement('p');
-        item.classList.add('menu-item');
-        item.innerHTML = x;
-
-        const price = document.createElement('p');
-        price.classList.add('menu-item');
-        price.innerHTML = y;
-
-        row.appendChild(item);
-        row.appendChild(spacer);
-        row.appendChild(price);
-
-        return row;
-    }
-
-
-    
-    farmMenu.appendChild(createItem('beef tartare', '$14'));
-    farmMenu.appendChild(createItem('mussels provencale', '$20'));
-    farmMenu.appendChild(createItem('scallops', '$18'));
-    farmMenu.appendChild(createItem('flemish onion soup', '$10'));
-    farmMenu.appendChild(createItem('braised short ribs', '$22'));
-    farmMenu.appendChild(createItem('wedge salad', '$10'));
-    farmMenu.appendChild(createItem('charcuterie', '$16'));
+    farmMenu.classList.add('menu');
+   
+    farmMenu.appendChild(createItem(
+        'beef tartare', 
+        '$14',
+        'egestas pretium aenean pharetra magna ac placerat vestibulum'));
+    farmMenu.appendChild(createItem(
+        'mussels provencale',
+        '$20',
+        'sed adipiscing diam donec adipiscing tristique risus nec'));
+    farmMenu.appendChild(createItem(
+        'scallops', 
+        '$18',
+        'vitae congue mauris rhoncus aenean vel elit scelerisque'));
+    farmMenu.appendChild(createItem(
+        'flemish onion soup', 
+        '$10',
+        'elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus'));
+    farmMenu.appendChild(createItem(
+        'braised short ribs', 
+        '$22',
+        'sagittis purus sit amet volutpat consequat mauris nunc'));
+    farmMenu.appendChild(createItem(
+        'wedge salad', 
+        '$10',
+        'nibh sed pulvinar proin gravida hendrerit lectus a'));
+    farmMenu.appendChild(createItem(
+        'charcuterie', 
+        '$16',
+        'non blandit massa enim nec dui nunc mattis'));
 
     return farmMenu;
 }
 
-export {tabVicturals};
+export {displayVicturals};

@@ -1,6 +1,8 @@
-import { tabHome } from "./home";
-import { tabVicturals } from "./victurals";
+import { displayHome } from "./home";
+import { displayLibations } from "./libations";
+import { displayVicturals } from "./victurals";
 
+// template functions
 function tabs() {
     const tabs = document.createElement('div');
     tabs.classList.add('tabs-container');
@@ -10,27 +12,28 @@ function tabs() {
     const home = document.createElement('li');
     home.innerHTML = '<a href=#>home</a>';
     home.id = 'home-tab';
-    home.onclick = function() {tabHome()};
+    home.onclick = function() {displayHome()};
     list.appendChild(home);
     const victurals = document.createElement('li');
     victurals.innerHTML = '<a href=#>victurals</a>';
     victurals.id = 'victurals-tab';
-    victurals.onclick = function() {tabVicturals()};
+    victurals.onclick = function() {displayVicturals()};
     list.appendChild(victurals);
     const libations = document.createElement('li');
     libations.innerHTML = '<a href=#>libations</a>';
     libations.id = 'libations-tab';
+    libations.onclick = function() {displayLibations()};
     list.appendChild(libations);
     const contact = document.createElement('li');
     contact.innerHTML = '<a href=#>contact</a>';
     contact.id = 'contact-tab';
+    contact.onclick = function() {displayContact()};
     list.appendChild(contact);
 
     tabs.appendChild(list);
 
     return tabs;
 }
-
 function header() {
     const header = document.createElement('div');
     header.classList.add('header');
@@ -49,7 +52,6 @@ function header() {
     header.appendChild(titleBox);
     return header;
 }
-
 function footer() {
     const footer = document.createElement('div');
     footer.classList.add('footer');
@@ -80,4 +82,48 @@ function footer() {
     return footer;
 }
 
-export {header, tabs, footer};
+function swapTab(page) {
+    const tab = document.getElementById(page + "-tab");
+
+    const activeTab = document.querySelector('.tab-active');
+    if(!activeTab) {
+        tab.classList.add('tab-active');
+    } else {
+        activeTab.classList.remove('tab-active');
+        tab.classList.add('tab-active');
+    }
+}  
+
+function createItem(x, y, z) {
+    const box = document.createElement('div');
+    box.classList.add('menu-row-container');
+
+    const row = document.createElement('div');
+    row.classList.add('menu-row');
+
+    const spacer = document.createElement('div');
+    spacer.classList.add('menu-item-spacer');
+
+    const item = document.createElement('p');
+    item.classList.add('menu-item');
+    item.innerHTML = x;
+
+    const price = document.createElement('p');
+    price.classList.add('menu-item');
+    price.innerHTML = y;
+
+    row.appendChild(item);
+    row.appendChild(spacer);
+    row.appendChild(price);
+    box.appendChild(row);
+
+    const description = document.createElement('p');
+    description.classList.add('menu-item-description');
+    description.innerHTML = z;
+    box.appendChild(description);
+
+    return box;
+}
+
+
+export {swapTab, createItem, header, tabs, footer};

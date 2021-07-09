@@ -1,5 +1,6 @@
+import {swapTab} from './lib.js';
 
-function buildPage() {
+function displayHome() {
     const content = document.getElementById('content');
     const currentPage = document.querySelector('.page-container');
 
@@ -7,6 +8,8 @@ function buildPage() {
         content.removeChild(currentPage);
     }
 
+    swapTab('home');
+    
     const pageContainer = document.createElement('div');
     pageContainer.classList.add('home-page-container');
     pageContainer.classList.add('page-container');
@@ -34,24 +37,12 @@ function buildPage() {
     aboutContainer.appendChild(aboutImg);
     pageContainer.appendChild(aboutContainer);
 
+    const bottomText = document.createElement('p');
+    bottomText.classList.add('home-bottom-text');
+    bottomText.innerHTML = 'come and gather.';
+    pageContainer.appendChild(bottomText);
+
     content.appendChild(pageContainer);
 }
 
-function tabHome() {
-    const content = document.getElementById('content');
-    // swap tabs
-    const tab = document.getElementById('home-tab');
-
-    const activeTab = document.querySelector('.tab-active');
-    if(!activeTab) {
-        tab.classList.add('tab-active');
-    } else {
-    activeTab.classList.remove('tab-active');
-    tab.classList.add('tab-active');
-    }
-
-    buildPage();
-}
-
-
-export {tabHome};
+export {displayHome};
