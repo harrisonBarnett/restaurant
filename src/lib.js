@@ -67,15 +67,15 @@ function footer() {
     const instagram = document.createElement('a');
     instagram.classList.add('footer-icon');
     instagram.href = '#';
-    instagram.innerHTML = '<img src="/static/images/social-icons/instagram.svg">';
+    instagram.innerHTML = '<a href="#"><img src="./images/social-icons/instagram.svg"></a>';
     footerList.appendChild(instagram);
     const twitter = document.createElement('div');
     twitter.classList.add('footer-icon');
-    twitter.innerHTML = '<a href="#"><img src="/static/images/social-icons/twitter.svg"></a>';
+    twitter.innerHTML = '<a href="#"><img src="./images/social-icons/twitter.svg"></a>';
     footerList.appendChild(twitter);
     const facebook = document.createElement('div');
     facebook.classList.add('footer-icon');
-    facebook.innerHTML = '<a href="#"><img src="/static/images/social-icons/facebook.svg"></a>';
+    facebook.innerHTML = '<a href="#"><img src="./images/social-icons/facebook.svg"></a>';
     footerList.appendChild(facebook);
 
     footer.appendChild(footerList);
