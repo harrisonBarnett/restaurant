@@ -33,47 +33,49 @@ function displayLibations() {
     heroAccent.classList.add('menu-img-accent');
     pageContainer.appendChild(heroAccent);
 
+    // add all of your menu items here
+    function menuItems() {
+        const farmMenu = document.createElement('div');
+        farmMenu.classList.add('menu');
+    
+        farmMenu.appendChild(createItem(
+            'grog blossom', 
+            '$14',
+            'adipiscing elit duis tristique sollicitudin nibh sit amet'));
+        farmMenu.appendChild(createItem(
+            'la vie en rose', 
+            '$13',
+            'massa tempor nec feugiat nisl pretium fusce id'));
+        farmMenu.appendChild(createItem(
+            'italian american', 
+            '$15',
+            'pellentesque dignissim enim sit amet venenatis urna cursus'));
+        farmMenu.appendChild(createItem(
+            "quint's revenge", 
+            '$13',
+            'id nibh tortor id aliquet lectus proin nibh'));
+        farmMenu.appendChild(createItem(
+            'bonnie & clyde', 
+            '$12',
+            'odio aenean sed adipiscing diam donec adipiscing tristique'));
+        farmMenu.appendChild(createItem(
+            'whiskey sour', 
+            '$10',
+            'ultricies integer quis auctor elit sed vulputate mi'));
+        farmMenu.appendChild(createItem(
+            'aperol spritz', 
+            '$12',
+            'egestas pretium aenean pharetra magna ac placerat vestibulum'));
+
+        return farmMenu;
+    }
+
     // append menuItems() to the document
     pageContainer.appendChild(menuItems());
 
     content.appendChild(pageContainer);
 }
 
-// add all of your menu items here
-function menuItems() {
-    const farmMenu = document.createElement('div');
-    farmMenu.classList.add('menu');
-   
-    farmMenu.appendChild(createItem(
-        'grog blossom', 
-        '$14',
-        'adipiscing elit duis tristique sollicitudin nibh sit amet'));
-    farmMenu.appendChild(createItem(
-        'la vie en rose', 
-        '$13',
-        'massa tempor nec feugiat nisl pretium fusce id'));
-    farmMenu.appendChild(createItem(
-        'italian american', 
-        '$15',
-        'pellentesque dignissim enim sit amet venenatis urna cursus'));
-    farmMenu.appendChild(createItem(
-        "quint's revenge", 
-        '$13',
-        'id nibh tortor id aliquet lectus proin nibh'));
-    farmMenu.appendChild(createItem(
-        'bonnie & clyde', 
-        '$12',
-        'odio aenean sed adipiscing diam donec adipiscing tristique'));
-    farmMenu.appendChild(createItem(
-        'whiskey sour', 
-        '$10',
-        'ultricies integer quis auctor elit sed vulputate mi'));
-    farmMenu.appendChild(createItem(
-        'aperol spritz', 
-        '$12',
-        'egestas pretium aenean pharetra magna ac placerat vestibulum'));
 
-    return farmMenu;
-}
 
 export {displayLibations};
